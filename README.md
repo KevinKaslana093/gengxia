@@ -2,6 +2,10 @@
 
 把你们之间的梗，变成一个朋友点开就能玩的小游戏。
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-248%20%E9%80%9A%E8%BF%87-brightgreen)](#%E6%B5%8B%E8%AF%95)
+[![Node](https://img.shields.io/badge/node-%3E%3D22.5-blue)](https://nodejs.org)
+
 输入一句生活中的吐槽、一段故事或一个祝福 → 生成一个竖屏小游戏（三种玩法 · 十二套场景）→ 把链接发给朋友，点开就能玩。
 
 > **v2 更新**：本轮在 v1 基础上增量开发，新增「三路跑酷」「限时点击」两种玩法与 12 套场景，
