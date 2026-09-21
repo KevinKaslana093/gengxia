@@ -101,9 +101,19 @@
   function render() {
     if (cleanupCurrent) { try { cleanupCurrent(); } catch (e) {} cleanupCurrent = null; }
     const path = location.pathname;
-    /* 静态托管（GitHub Pages 等）会带 .html 后缀或尾斜杠，这里一并容忍，
-     * 使同一套路由在动态与静态部署下都能工作。 */
-    const cleaned = path.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+    /* 路由清洗：静态托管（GitHub Pages 等）会带来两种情况——
+     * 1) 站点挂在子路径下（如 /gengxia/g/xxx），需剥掉仓库名前缀
+     * 2) 访问地址带 .html 后缀或尾斜杠
+     * 这里统一处理，使同一套路由在动态部署与静态部署下都能工作。 */
+    const base = (document.querySelector('base') || {}).getAttribute
+      ? (document.querySelector('base').getAttribute('href') || '/')
+      : '/';
+    let p = path;
+    if (base && base !== '/') {
+      const prefix = base.replace(/\/+$/, '');
+      if (p.indexOf(prefix) === 0) p = p.slice(prefix.length) || '/';
+    }
+    const cleaned = p.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
     const m = /^\/g\/([A-Za-z0-9_-]{4,32})$/.exec(cleaned);
     if (m) return renderPlay(m[1]);
     if (cleaned === '/' || cleaned === '/index') return renderHome();
