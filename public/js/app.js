@@ -101,9 +101,12 @@
   function render() {
     if (cleanupCurrent) { try { cleanupCurrent(); } catch (e) {} cleanupCurrent = null; }
     const path = location.pathname;
-    const m = /^\/g\/([A-Za-z0-9_-]{4,32})$/.exec(path);
+    /* 静态托管（GitHub Pages 等）会带 .html 后缀或尾斜杠，这里一并容忍，
+     * 使同一套路由在动态与静态部署下都能工作。 */
+    const cleaned = path.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+    const m = /^\/g\/([A-Za-z0-9_-]{4,32})$/.exec(cleaned);
     if (m) return renderPlay(m[1]);
-    if (path === '/' || path === '/index.html') return renderHome();
+    if (cleaned === '/' || cleaned === '/index') return renderHome();
     return renderNotFound('页面不存在', '检查一下地址，或者回到首页重新开始。');
   }
 
