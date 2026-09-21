@@ -90,8 +90,21 @@
   })();
 
   /* ---------------- 路由 ---------------- */
+  /* 站点根路径：静态托管（GitHub Pages）把站点放在 /<repo>/ 下，
+   * 页面用 <base href> 声明；动态部署时没有 <base>，即 '/'。
+   * 所有对外链接与 pushState 都必须带上它，否则分享出去的地址会 404。 */
+  function siteBase() {
+    const el = document.querySelector('base');
+    const href = el && el.getAttribute('href');
+    if (!href || href === '/') return '/';
+    return href.replace(/\/+$/, '') + '/';
+  }
+  function withBase(path) {
+    return siteBase() + String(path).replace(/^\/+/, '');
+  }
+
   function navigate(path) {
-    history.pushState({}, '', path);
+    history.pushState({}, '', withBase(path));
     render();
   }
   window.addEventListener('popstate', render);
@@ -105,11 +118,9 @@
      * 1) 站点挂在子路径下（如 /gengxia/g/xxx），需剥掉仓库名前缀
      * 2) 访问地址带 .html 后缀或尾斜杠
      * 这里统一处理，使同一套路由在动态部署与静态部署下都能工作。 */
-    const base = (document.querySelector('base') || {}).getAttribute
-      ? (document.querySelector('base').getAttribute('href') || '/')
-      : '/';
+    const base = siteBase();
     let p = path;
-    if (base && base !== '/') {
+    if (base !== '/') {
       const prefix = base.replace(/\/+$/, '');
       if (p.indexOf(prefix) === 0) p = p.slice(prefix.length) || '/';
     }
@@ -679,12 +690,12 @@
       return cfg.ending.low;
     }
 
-    function shareUrl() { return location.origin + '/g/' + gid; }
+    function shareUrl() { return location.origin + withBase('/g/' + gid); }
 
     /* 带挑战分数的分享链接：朋友点开会看到"发起人打了 N 分"。
      * 分数只放在查询串里，链接不含编辑凭据、不含原始故事。 */
     function challengeUrl(score) {
-      return location.origin + '/g/' + gid + '?c=' + Math.max(0, Math.floor(score || 0));
+      return location.origin + withBase('/g/' + gid) + '?c=' + Math.max(0, Math.floor(score || 0));
     }
 
     function showResultOverlay(r) {
@@ -1021,7 +1032,7 @@
     game.resize();
     showStartOverlay();
     if (fromCreate) {
-      history.replaceState({}, '', '/g/' + gid);
+      history.replaceState({}, '', withBase('/g/' + gid));
       toast('生成成功！点「开始游戏」试玩', 'ok', 3000);
     }
   }
