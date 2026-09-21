@@ -186,6 +186,14 @@ gengxia/
 
 SQLite 需要可写持久磁盘。**无持久磁盘的平台（如部分无状态容器）必须换成持久数据库**，否则分享链接会在重启后失效。
 
+> 已给出开箱即用的配置：[`deploy/README.md`](deploy/README.md)（各平台持久化对比与上线检查清单）、
+> [`Dockerfile`](Dockerfile)（含 `HEALTHCHECK` 与非 root 运行）、
+> [`deploy/northflank.yaml`](deploy/northflank.yaml)（免费额度含持久卷）、
+> [`deploy/fly.toml`](deploy/fly.toml)（付费低流量）。
+>
+> **不适用**：Vercel / Netlify（无状态 Serverless，文件系统随冷启动清空）；
+> Render **免费**档（官方文档明确无持久盘，且 15 分钟无请求休眠）。
+
 ### 方式一：直接跑（推荐先验证）
 
 ```bash
@@ -194,7 +202,17 @@ HOST=0.0.0.0 PORT=8765 node server/index.js
 
 前面挂一层 HTTPS 反向代理（Caddy / Nginx），并把 `GEN_*` 上限设成符合预算的值。
 
-### 方式二：systemd
+### 方式二：Docker
+
+```bash
+docker build -t gengxia .
+docker run -d -p 8765:8765 -v gengxia-data:/app/data \
+  -e LLM_API_KEY=... gengxia
+```
+
+`-v gengxia-data:/app/data` 必须挂，否则容器重建即丢数据。
+
+### 方式三：systemd
 
 ```ini
 [Unit]
