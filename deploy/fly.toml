@@ -1,0 +1,44 @@
+# 部署到 Fly.io（付费但便宜：按运行秒计费，可 scale-to-zero）
+#
+# 成本参考（2026 实测公布价）：shared-cpu-1x 256MB ≈ $2.02/月（常开），
+# 1GB 卷 $0.15/月。低流量站点开了 auto-stop 后主要成本就是卷+极少量运行时长。
+# 注意：Fly 对**新账号没有免费额度**（老账号的免费额度仍保留）。
+
+app = "gengxia"
+primary_region = "nrt"   # 东京，离中国大陆较近；可改 hkg（香港）若可用
+
+[build]
+
+[env]
+  HOST = "0.0.0.0"
+  PORT = "8765"
+  DB_PATH = "/app/data/gengxia.db"
+  TZ = "Asia/Shanghai"
+
+# 密钥在控制台设置，不要写进仓库：
+#   fly secrets set LLM_API_KEY=... LLM_BASE_URL=... LLM_MODEL=... LLM_MAX_TOKENS=8000
+
+[mounts]
+  source = "gengxia_data"
+  destination = "/app/data"     # SQLite 必须落在持久卷上
+
+[http_service]
+  internal_port = 8765
+  force_https = true
+  # 低流量场景：无请求时停机（省费用），有请求自动唤醒
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 20
+    hard_limit = 40
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
+  cpus = 1
+
+# 说明：SQLite + 单卷 → 只能跑 1 台机器，不能水平扩展。
+# 若要多实例，必须把存储换成托管数据库（本项目设计为本地 SQLite，未适配）。

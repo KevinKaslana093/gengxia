@@ -1,0 +1,22 @@
+# 密钥与本地数据（严禁打进镜像）
+.env
+.env.local
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# 版本控制与文档产物
+.git/
+.gitignore
+screenshots/
+eval/
+*.md
+
+# 依赖与临时文件
+node_modules/
+package-lock.json
+*.log
+*.txt
+tmp/
+.tmp/

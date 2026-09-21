@@ -1,0 +1,49 @@
+# 部署到 Northflank（免费额度：2 服务 + 持久卷，适合 SQLite）
+#
+# 用法：
+#   1. 在 https://app.northflank.com 创建项目
+#   2. New → Service → Build from Git，选本仓库
+#   3. 或把本文件内容贴进「Template」导入
+#
+# 关键点：SQLite 需要持久卷，必须挂到 /app/data，
+# 且服务实例数固定为 1（多实例会各自写自己的库，分享链接会串）。
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: gengxia
+spec:
+  type: web
+  build:
+    type: buildpack
+    buildpack:
+      type: nodejs
+      version: latest
+  runtime:
+    type: nodejs
+    nodeVersion: "22"
+  deployment:
+    instances: 1
+    # 单实例 + 持久卷：不能水平扩展，这是 SQLite 的固有限制
+    strategy: replace
+  ports:
+    - name: http
+      port: 8765
+      protocol: HTTP
+      public: true
+  env:
+    HOST: "0.0.0.0"
+    PORT: "8765"
+    DB_PATH: "/app/data/gengxia.db"
+    TZ: "Asia/Shanghai"
+    # 以下需在控制台设置（含密钥，不要写进仓库）
+    # LLM_PROVIDER=openai-compat
+    # LLM_BASE_URL=https://ollama.com/v1
+    # LLM_MODEL=deepseek-v4.1-flash
+    # LLM_API_KEY=<你的密钥>
+    # LLM_MAX_TOKENS=8000
+    # GEN_ENABLED=true
+  volumes:
+    - name: gengxia-data
+      mountPath: /app/data
+      size: 1
