@@ -1,0 +1,39 @@
+{
+ "id": "demo-tongqin",
+ "config": {
+  "schemaVersion": 2,
+  "title": "挤上那班车",
+  "intro": "早高峰的地铁，门开的那三秒决定一切。",
+  "mode": "runner",
+  "sceneId": "subway-commute",
+  "player": {
+   "name": "通勤族",
+   "avatarId": "commuter"
+  },
+  "obstacle": {
+   "name": "挤过来的队伍",
+   "spriteId": "queue-rope"
+  },
+  "collectible": {
+   "name": "空座位",
+   "spriteId": "seat"
+  },
+  "lines": [
+   "往里走一走",
+   "下一班就到你",
+   "别挤了别挤了",
+   "今天能坐下吗"
+  ],
+  "ending": {
+   "low": "站了一路，鞋还被踩了三脚。明天早点出门。",
+   "mid": "挤上去了，虽然是被推进去的。",
+   "high": "一次挤上还有座位，今天运气爆棚！"
+  },
+  "ruleText": "切换跑道，冲过 空座位，撞上 挤过来的队伍 会掉血。"
+ },
+ "scene": null,
+ "mode": "runner",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

@@ -1,0 +1,39 @@
+{
+ "id": "demo-naicha",
+ "config": {
+  "schemaVersion": 2,
+  "title": "全糖去冰加珍珠",
+  "intro": "下午三点的奶茶店，订单多到店员手忙脚乱。",
+  "mode": "click",
+  "sceneId": "milk-tea-shop",
+  "player": {
+   "name": "点单的人",
+   "avatarId": "commuter"
+  },
+  "obstacle": {
+   "name": "排到门口的长队",
+   "spriteId": "queue-rope"
+  },
+  "collectible": {
+   "name": "刚加好的珍珠",
+   "spriteId": "boba"
+  },
+  "lines": [
+   "全糖去冰加珍珠",
+   "您的号是 47 号",
+   "前面还有 12 杯",
+   "珍珠快没了"
+  ],
+  "ending": {
+   "low": "单子做错了三杯，店员想下班了。",
+   "mid": "基本没错，就是珍珠给少了。",
+   "high": "零失误出单，你就是奶茶店店长！"
+  },
+  "ruleText": "点掉 排到门口的长队 得分，点到 刚加好的珍珠 会扣血。"
+ },
+ "scene": null,
+ "mode": "click",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

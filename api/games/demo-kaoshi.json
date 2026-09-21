@@ -1,0 +1,39 @@
+{
+ "id": "demo-kaoshi",
+ "config": {
+  "schemaVersion": 2,
+  "title": "还有十分钟交卷",
+  "intro": "选择题还剩一整页，教室后墙的钟走得飞快。",
+  "mode": "click",
+  "sceneId": "exam-classroom",
+  "player": {
+   "name": "考生",
+   "avatarId": "exam-taker"
+  },
+  "obstacle": {
+   "name": "没做完的题",
+   "spriteId": "exam-question"
+  },
+  "collectible": {
+   "name": "写完的答题卡",
+   "spriteId": "answer-sheet"
+  },
+  "lines": [
+   "还有十分钟",
+   "这道题见过（假的）",
+   "涂卡了吗",
+   "下一题下一题"
+  ],
+  "ending": {
+   "low": "交卷铃响了，最后五道全靠蒙。",
+   "mid": "勉强写完了，选择题一半靠直觉。",
+   "high": "提前十分钟写完还检查了一遍，稳了！"
+  },
+  "ruleText": "点掉 没做完的题 得分，点到 写完的答题卡 会扣血。"
+ },
+ "scene": null,
+ "mode": "click",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

@@ -1,0 +1,39 @@
+{
+ "id": "demo-kuaidi",
+ "config": {
+  "schemaVersion": 2,
+  "title": "双十一取件大作战",
+  "intro": "驿站货架已经堆到天花板，取件码一条接一条。",
+  "mode": "click",
+  "sceneId": "parcel-delivery",
+  "player": {
+   "name": "网购的人",
+   "avatarId": "shopper"
+  },
+  "obstacle": {
+   "name": "要签收的包裹",
+   "spriteId": "cardboard-box"
+  },
+  "collectible": {
+   "name": "快过期的优惠券",
+   "spriteId": "coupon"
+  },
+  "lines": [
+   "您的快递到了",
+   "取件码 8-3-2-1",
+   "货架满了",
+   "还有一个在路上"
+  ],
+  "ending": {
+   "low": "包裹堆成山，这个月卡里没钱了。",
+   "mid": "搬回了大部分，胳膊有点酸。",
+   "high": "一次搬完所有包裹，你就是驿站之王！"
+  },
+  "ruleText": "点掉 要签收的包裹 得分，点到 快过期的优惠券 会扣血。"
+ },
+ "scene": null,
+ "mode": "click",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

@@ -1,0 +1,39 @@
+{
+ "id": "demo-airport",
+ "config": {
+  "schemaVersion": 2,
+  "title": "赶最后一班登机",
+  "intro": "广播已经在念你的名字了，登机口在最远那头。",
+  "mode": "runner",
+  "sceneId": "travel-airport",
+  "player": {
+   "name": "赶飞机的人",
+   "avatarId": "traveler"
+  },
+  "obstacle": {
+   "name": "气流颠簸",
+   "spriteId": "turbulence"
+  },
+  "collectible": {
+   "name": "登机牌",
+   "spriteId": "boarding-pass"
+  },
+  "lines": [
+   "请尽快登机",
+   "登机口在最远那头",
+   "鞋带开了也不停",
+   "还有八分钟"
+  ],
+  "ending": {
+   "low": "改签窗口在等你，今晚先住机场吧。",
+   "mid": "连滚带爬上了飞机，行李差点没跟上。",
+   "high": "稳稳落座，还赶上了发餐食！"
+  },
+  "ruleText": "切换跑道，冲过 登机牌，撞上 气流颠簸 会掉血。"
+ },
+ "scene": null,
+ "mode": "runner",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

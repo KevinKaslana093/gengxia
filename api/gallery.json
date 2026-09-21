@@ -1,0 +1,74 @@
+{
+ "games": [
+  {
+   "id": "demo-genggao",
+   "title": "再小改一下",
+   "mode": "dodge",
+   "sceneId": "office-night",
+   "source": "preset"
+  },
+  {
+   "id": "demo-birthday",
+   "title": "小王的生日冲刺",
+   "mode": "dodge",
+   "sceneId": "birthday-party",
+   "source": "preset"
+  },
+  {
+   "id": "demo-mao",
+   "title": "凌晨三点演唱会",
+   "mode": "dodge",
+   "sceneId": "pet-living-room",
+   "source": "preset"
+  },
+  {
+   "id": "demo-zaoba-bao",
+   "title": "两点还没睡",
+   "mode": "dodge",
+   "sceneId": "bedroom-night",
+   "source": "preset"
+  },
+  {
+   "id": "demo-zaoba",
+   "title": "早八跑道",
+   "mode": "runner",
+   "sceneId": "dorm-morning",
+   "source": "preset"
+  },
+  {
+   "id": "demo-tongqin",
+   "title": "挤上那班车",
+   "mode": "runner",
+   "sceneId": "subway-commute",
+   "source": "preset"
+  },
+  {
+   "id": "demo-airport",
+   "title": "赶最后一班登机",
+   "mode": "runner",
+   "sceneId": "travel-airport",
+   "source": "preset"
+  },
+  {
+   "id": "demo-naicha",
+   "title": "全糖去冰加珍珠",
+   "mode": "click",
+   "sceneId": "milk-tea-shop",
+   "source": "preset"
+  },
+  {
+   "id": "demo-kaoshi",
+   "title": "还有十分钟交卷",
+   "mode": "click",
+   "sceneId": "exam-classroom",
+   "source": "preset"
+  },
+  {
+   "id": "demo-kuaidi",
+   "title": "双十一取件大作战",
+   "mode": "click",
+   "sceneId": "parcel-delivery",
+   "source": "preset"
+  }
+ ]
+}

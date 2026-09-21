@@ -1,0 +1,39 @@
+{
+ "id": "demo-birthday",
+ "config": {
+  "schemaVersion": 2,
+  "title": "小王的生日冲刺",
+  "intro": "派对已经开场，最爱的奶茶和蛋糕还在路上。",
+  "mode": "dodge",
+  "sceneId": "birthday-party",
+  "player": {
+   "name": "寿星小王",
+   "avatarId": "birthday-star"
+  },
+  "obstacle": {
+   "name": "迟到的闹钟",
+   "spriteId": "alarm-clock"
+  },
+  "collectible": {
+   "name": "全糖奶茶",
+   "spriteId": "milk-tea"
+  },
+  "lines": [
+   "生日快乐！",
+   "奶茶加料了吗",
+   "蛋糕在路上了",
+   "许愿要快，蜡烛要灭"
+  ],
+  "ending": {
+   "low": "蜡烛还没点上，派对就散场了，明年再战。",
+   "mid": "派对及格分！大家记得你最爱的奶茶口味。",
+   "high": "全场为你庆生，奶茶蛋糕全都到位！"
+  },
+  "ruleText": "接住 全糖奶茶 得分，碰到 迟到的闹钟 会扣血。"
+ },
+ "scene": null,
+ "mode": "dodge",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

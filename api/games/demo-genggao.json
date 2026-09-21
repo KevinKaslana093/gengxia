@@ -1,0 +1,40 @@
+{
+ "id": "demo-genggao",
+ "config": {
+  "schemaVersion": 2,
+  "title": "再小改一下",
+  "intro": "第五版刚发出去，第六版需求已经在路上了。",
+  "mode": "dodge",
+  "sceneId": "office-night",
+  "player": {
+   "name": "打工人",
+   "avatarId": "office-worker"
+  },
+  "obstacle": {
+   "name": "临时需求",
+   "spriteId": "document"
+  },
+  "collectible": {
+   "name": "下班卡",
+   "spriteId": "ticket"
+  },
+  "lines": [
+   "这个改动很小",
+   "最后再来一版",
+   "下班就在前方",
+   "第五版了，第几版了？",
+   "进度呢？"
+  ],
+  "ending": {
+   "low": "今天先到这里，明天再和需求周旋。",
+   "mid": "你成功守住了一部分下班时间！",
+   "high": "准点下班大师，需求都追不上你！"
+  },
+  "ruleText": "接住 下班卡 得分，碰到 临时需求 会扣血。"
+ },
+ "scene": null,
+ "mode": "dodge",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

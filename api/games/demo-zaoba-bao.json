@@ -1,0 +1,39 @@
+{
+ "id": "demo-zaoba-bao",
+ "config": {
+  "schemaVersion": 2,
+  "title": "两点还没睡",
+  "intro": "说好十一点睡，手机说再刷五分钟。",
+  "mode": "dodge",
+  "sceneId": "bedroom-night",
+  "player": {
+   "name": "熬夜的人",
+   "avatarId": "sleepy-head"
+  },
+  "obstacle": {
+   "name": "停不下来的手机",
+   "spriteId": "phone"
+  },
+  "collectible": {
+   "name": "枕头",
+   "spriteId": "pillow"
+  },
+  "lines": [
+   "再刷五分钟",
+   "十一点就睡（假的）",
+   "枕头在等我",
+   "黑眼圈又深了"
+  ],
+  "ending": {
+   "low": "手机赢了，枕头等了一夜。今晚试试把充电线放远一点。",
+   "mid": "你成功在十二点前放下手机，进步很大。",
+   "high": "十一点准时入睡，黑眼圈终于淡了！"
+  },
+  "ruleText": "接住 枕头 得分，碰到 停不下来的手机 会扣血。"
+ },
+ "scene": null,
+ "mode": "dodge",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

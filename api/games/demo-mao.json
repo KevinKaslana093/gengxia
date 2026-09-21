@@ -1,0 +1,39 @@
+{
+ "id": "demo-mao",
+ "config": {
+  "schemaVersion": 2,
+  "title": "凌晨三点演唱会",
+  "intro": "猫准时开唱，客厅里的东西开始一件件往下掉。",
+  "mode": "dodge",
+  "sceneId": "pet-living-room",
+  "player": {
+   "name": "铲屎官",
+   "avatarId": "cat-owner"
+  },
+  "obstacle": {
+   "name": "被推下桌的水杯",
+   "spriteId": "water-glass"
+  },
+  "collectible": {
+   "name": "猫条",
+   "spriteId": "cat-treat"
+  },
+  "lines": [
+   "喵——",
+   "这个也要推下去",
+   "猫条拿来",
+   "凌晨三点，准时开唱"
+  ],
+  "ending": {
+   "low": "水杯碎了三个，猫毫发无伤。今晚锁好柜子吧。",
+   "mid": "你成功救下了大部分杯子，猫有点佩服你。",
+   "high": "全场零损失！你就是凌晨三点演唱会的最佳场务。"
+  },
+  "ruleText": "接住 猫条 得分，碰到 被推下桌的水杯 会扣血。"
+ },
+ "scene": null,
+ "mode": "dodge",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}

@@ -1,0 +1,39 @@
+{
+ "id": "demo-zaoba",
+ "config": {
+  "schemaVersion": 2,
+  "title": "早八跑道",
+  "intro": "七个闹钟全阵亡，宿舍楼下已经开始点名。",
+  "mode": "runner",
+  "sceneId": "dorm-morning",
+  "player": {
+   "name": "起床困难户",
+   "avatarId": "sleepy-head"
+  },
+  "obstacle": {
+   "name": "连环闹钟",
+   "spriteId": "alarm-clock"
+  },
+  "collectible": {
+   "name": "早饭",
+   "spriteId": "coffee"
+  },
+  "lines": [
+   "再睡五分钟",
+   "要迟到了！",
+   "鞋穿反了也别停",
+   "点名点到我了"
+  ],
+  "ending": {
+   "low": "今天又是迟到的一天，明天一定早起（大概）。",
+   "mid": "踩着铃声冲进教室，勉强算赢了。",
+   "high": "提前十分钟到教室，你就是早八战神！"
+  },
+  "ruleText": "切换跑道，冲过 早饭，撞上 连环闹钟 会掉血。"
+ },
+ "scene": null,
+ "mode": "runner",
+ "createdAt": 0,
+ "source": "preset",
+ "editable": false
+}
