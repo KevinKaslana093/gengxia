@@ -1,0 +1,24 @@
+{
+  "name": "geng-xia",
+  "version": "2.0.0",
+  "private": true,
+  "description": "梗一下 —— 把你的梗变成一个小游戏（输入一个梗，生成可玩、可分享的竖屏小游戏；三种玩法 · 十二套场景）",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node tests/all.js",
+    "test:api": "node tests/run.js",
+    "test:engine": "node tests/engine.js",
+    "test:modes": "node tests/modes.js",
+    "test:llm": "node tests/llm-errors.js",
+    "test:semantic": "node tests/semantic.js",
+    "test:sharecard": "node tests/sharecard.js",
+    "eval": "node scripts/eval-100.js",
+    "eval:pilot": "EVAL_PILOT=1 EVAL_DB=./data/eval-pilot.db EVAL_OUT=./eval/pilot.json node scripts/eval-100.js"
+  },
+  "dependencies": {}
+}

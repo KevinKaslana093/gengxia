@@ -1,0 +1,748 @@
+{
+ "summary": {
+  "generatedAt": "2026-09-20T16:45:00.101Z",
+  "model": "deepseek-v4.1-flash",
+  "provider": "openai-compat",
+  "total": 15,
+  "ok": 15,
+  "failed": 0,
+  "structuralValidityRate": 100,
+  "ms": {
+   "avg": 30481,
+   "p50": 32577,
+   "p90": 40254,
+   "min": 8780,
+   "max": 42748
+  },
+  "retriedCount": 0,
+  "titleUniqueness": 100,
+  "modeDistribution": {
+   "dodge": 5,
+   "runner": 5,
+   "click": 5
+  },
+  "sceneDistribution": {
+   "office-night": 6,
+   "dorm-morning": 2,
+   "pet-living-room": 2,
+   "kitchen": 1,
+   "travel-airport": 1,
+   "gym": 1,
+   "subway-commute": 1,
+   "parcel-delivery": 1
+  },
+  "errorBreakdown": {},
+  "byKind": {
+   "work": {
+    "n": 5,
+    "ok": 5
+   },
+   "dorm": {
+    "n": 2,
+    "ok": 2
+   },
+   "pet": {
+    "n": 2,
+    "ok": 2
+   },
+   "home": {
+    "n": 1,
+    "ok": 1
+   },
+   "travel": {
+    "n": 2,
+    "ok": 2
+   },
+   "health": {
+    "n": 1,
+    "ok": 1
+   },
+   "shopping": {
+    "n": 1,
+    "ok": 1
+   },
+   "subtle": {
+    "n": 1,
+    "ok": 1
+   }
+  },
+  "tokenUsage": "unknown（服务未返回 token 用量，未做估算）",
+  "notes": "原始故事仅作为输入记录在本地评测文件中，未写入产品数据库。"
+ },
+ "results": [
+  {
+   "idx": 0,
+   "kind": "work",
+   "input": "老板一天改五遍需求，每次都说这是最后一版，结果第二天又推翻重来，我们组的进度条已经倒退了。",
+   "inputChars": 45,
+   "forceMode": "dodge",
+   "ms": 8780,
+   "status": 201,
+   "ok": true,
+   "id": "Ci11kYuyOQVA",
+   "mode": "dodge",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "第五版又来了",
+    "intro": "凌晨两点，老板说这是最后一版，进度条却悄悄往回走。",
+    "ruleText": "接住 续命咖啡 得分，碰到 第五版需求 会扣血。",
+    "mode": "dodge",
+    "sceneId": "office-night",
+    "player": {
+     "name": "改稿打工人",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "续命咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "第五版需求",
+     "spriteId": "document"
+    },
+    "lines": [
+     "这是最后一版",
+     "就改一个小地方",
+     "进度条怎么倒退了",
+     "明天再推翻一次",
+     "咖啡先满上"
+    ],
+    "ending": {
+     "low": "需求又改了，进度倒退不怪你，先睡吧，明天还有第六版。",
+     "mid": "接住了几杯咖啡，躲过了几版需求，进度条勉强没归零。",
+     "high": "最后一版真的撑住了，今晚的咖啡没白喝，进度条保住了！"
+    }
+   }
+  },
+  {
+   "idx": 1,
+   "kind": "work",
+   "input": "甲方说要\"五彩斑斓的黑\"，设计改了十七版，最后选了第一版，还说这是他们启发的结果。",
+   "inputChars": 41,
+   "forceMode": "dodge",
+   "ms": 15026,
+   "status": 201,
+   "ok": true,
+   "id": "t-J61kgY_d5E",
+   "mode": "dodge",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "五彩斑斓的黑",
+    "intro": "凌晨两点，屏幕又亮了。甲方发来一句：这次想要五彩斑斓的黑。",
+    "ruleText": "接住 续命咖啡 得分，碰到 甲方的新消息 会扣血。",
+    "mode": "dodge",
+    "sceneId": "office-night",
+    "player": {
+     "name": "改稿设计师",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "续命咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "甲方的新消息",
+     "spriteId": "message-bubble"
+    },
+    "lines": [
+     "要五彩斑斓的黑，懂？",
+     "再改一版就好",
+     "这个改动很小的",
+     "最后选了第一版",
+     "这是我们一起启发的结果"
+    ],
+    "ending": {
+     "low": "十七版全被否了，咖啡一口没接住。先睡吧，明天的你依然是个好设计师。",
+     "mid": "接住了几杯咖啡，也躲掉了几条消息。改稿这条路，能撑住就已经赢了。",
+     "high": "咖啡接满，消息全躲，甲方终于点头，还说这是他们启发的结果。你笑了，笑得很有职业素养。"
+    }
+   }
+  },
+  {
+   "idx": 2,
+   "kind": "dorm",
+   "input": "我们宿舍都起不来床，早八的闹钟响了七次，最后是楼下阿姨点名把我们叫起来的。",
+   "inputChars": 37,
+   "forceMode": "dodge",
+   "ms": 20431,
+   "status": 201,
+   "ok": true,
+   "id": "TTy_yd_SqL84",
+   "mode": "dodge",
+   "sceneId": "dorm-morning",
+   "attempts": 1,
+   "output": {
+    "title": "第七个闹钟",
+    "intro": "早八的闹钟已经响到第七次，宿舍全员装睡，楼下阿姨的脚步声越来越近。",
+    "ruleText": "接住 续命咖啡 得分，碰到 夺命闹钟 会扣血。",
+    "mode": "dodge",
+    "sceneId": "dorm-morning",
+    "player": {
+     "name": "早八困困",
+     "avatarId": "sleepy-head"
+    },
+    "collectible": {
+     "name": "续命咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "夺命闹钟",
+     "spriteId": "alarm-clock"
+    },
+    "lines": [
+     "再睡五分钟",
+     "闹钟怎么又响了",
+     "阿姨来了快起",
+     "点名就差你了",
+     "这杯咖啡我干了"
+    ],
+    "ending": {
+     "low": "阿姨点名都叫不醒你，早八的课只能靠室友帮你答到了。",
+     "mid": "挣扎着爬起来了，虽然迟了点，但咖啡还是喝上了。",
+     "high": "闹钟没白响，咖啡没白喝，早八点名稳稳赶上！"
+    }
+   }
+  },
+  {
+   "idx": 3,
+   "kind": "pet",
+   "input": "我的猫每天凌晨三点开演唱会，我拿着猫条追它，它躲开拖鞋还要把水杯推下桌，最后是我先睡着了。",
+   "inputChars": 45,
+   "forceMode": "dodge",
+   "ms": 32021,
+   "status": 201,
+   "ok": true,
+   "id": "G34XoLRWxNsD",
+   "mode": "dodge",
+   "sceneId": "pet-living-room",
+   "attempts": 1,
+   "output": {
+    "title": "凌晨三点的猫条",
+    "intro": "凌晨三点，客厅准时开演。猫条攥在手里，桌边的水杯摇摇欲坠。",
+    "ruleText": "接住 猫条 得分，碰到 飞来的水杯 会扣血。",
+    "mode": "dodge",
+    "sceneId": "pet-living-room",
+    "player": {
+     "name": "铲屎官",
+     "avatarId": "cat-owner"
+    },
+    "collectible": {
+     "name": "猫条",
+     "spriteId": "cat-treat"
+    },
+    "obstacle": {
+     "name": "飞来的水杯",
+     "spriteId": "water-glass"
+    },
+    "lines": [
+     "凌晨三点，准时开演",
+     "猫条一摇，水杯别倒",
+     "杯子要掉了！",
+     "再玩五分钟就睡",
+     "我先睡了，你随意"
+    ],
+    "ending": {
+     "low": "猫条没接住几根，水杯倒是响了好几回。你先睡着了，演唱会还在继续。",
+     "mid": "猫条接住了一些，水杯也躲过了大半。凌晨三点的场子，你撑到了中场休息。",
+     "high": "猫条一根没漏，水杯稳稳在桌上。整场演唱会你全程在线，今晚是你赢了。"
+    }
+   }
+  },
+  {
+   "idx": 4,
+   "kind": "home",
+   "input": "我想给家人做一顿饭，结果煎蛋糊了、汤咸了、锅还烧黑了一个，最后全家一起吃泡面，都说泡面真香。",
+   "inputChars": 46,
+   "forceMode": "dodge",
+   "ms": 24476,
+   "status": 201,
+   "ok": true,
+   "id": "nvm1m2UBmICI",
+   "mode": "dodge",
+   "sceneId": "kitchen",
+   "attempts": 1,
+   "output": {
+    "title": "泡面真香",
+    "intro": "第一次给全家掌勺，厨房已经开始冒烟了",
+    "ruleText": "接住 金黄的煎蛋 得分，碰到 烧黑的锅 会扣血。",
+    "mode": "dodge",
+    "sceneId": "kitchen",
+    "player": {
+     "name": "掌勺的我",
+     "avatarId": "chef"
+    },
+    "collectible": {
+     "name": "金黄的煎蛋",
+     "spriteId": "fried-egg"
+    },
+    "obstacle": {
+     "name": "烧黑的锅",
+     "spriteId": "scorched-pan"
+    },
+    "lines": [
+     "煎蛋，这次一定",
+     "汤是不是又咸了",
+     "锅底黑成一片了",
+     "泡面真香，真的",
+     "下次还是点外卖吧"
+    ],
+    "ending": {
+     "low": "厨房像被炸过，锅比夜色还黑。但泡面是热的，全家照样吃得开心——下次还有机会。",
+     "mid": "糊了两个蛋，咸了一锅汤，好歹端出了点东西。泡面压轴登场，稳住了全场。",
+     "high": "煎蛋金黄、汤头刚好，锅也没黑！全家一致认定：你掌勺，泡面只配当彩蛋。"
+    }
+   }
+  },
+  {
+   "idx": 5,
+   "kind": "travel",
+   "input": "赶飞机起晚了，安检排队的时候前面的人把液体全掏出来慢慢装袋，我盯着手表心在滴血。",
+   "inputChars": 40,
+   "forceMode": "runner",
+   "ms": 25516,
+   "status": 201,
+   "ok": true,
+   "id": "M3JwsfAQsgZb",
+   "mode": "runner",
+   "sceneId": "travel-airport",
+   "attempts": 1,
+   "output": {
+    "title": "登机口还有二十分钟",
+    "intro": "闹钟没响，航班不等人。安检队伍挪一格，我手表上的秒针就滴一次血。",
+    "ruleText": "切换跑道，冲过 登机牌，撞上 安检长队 会掉血。",
+    "mode": "runner",
+    "sceneId": "travel-airport",
+    "player": {
+     "name": "赶飞机的我",
+     "avatarId": "traveler"
+    },
+    "collectible": {
+     "name": "登机牌",
+     "spriteId": "boarding-pass"
+    },
+    "obstacle": {
+     "name": "安检长队",
+     "spriteId": "queue-rope"
+    },
+    "lines": [
+     "前面大哥开始掏液体了",
+     "登机牌别跑，我来了",
+     "表针走得比我快",
+     "还有二十分钟，稳住",
+     "这队怎么一动不动"
+    ],
+    "ending": {
+     "low": "航班是赶不上了，但你练出了看表的肌肉记忆。下次闹钟定三个，液体提前装袋。",
+     "mid": "气喘吁吁冲到登机口，广播正好喊到你的名字。惊险，但过关。",
+     "high": "你踩着最后一秒登机，还白捡一个靠窗位。今天这表，没白盯。"
+    }
+   }
+  },
+  {
+   "idx": 6,
+   "kind": "dorm",
+   "input": "期末考试前一晚，全宿舍决定六点起床复习，第二天十一点我们互相看着对方笑了。",
+   "inputChars": 37,
+   "forceMode": "runner",
+   "ms": 30681,
+   "status": 201,
+   "ok": true,
+   "id": "3KfKlB9-s3L2",
+   "mode": "runner",
+   "sceneId": "dorm-morning",
+   "attempts": 1,
+   "output": {
+    "title": "六点起，十一点笑",
+    "intro": "期末前一晚，全宿舍立下六点起床的flag，闹钟排好了队，被窝也做好了准备。",
+    "ruleText": "切换跑道，冲过 提神咖啡，撞上 六点的闹钟 会掉血。",
+    "mode": "runner",
+    "sceneId": "dorm-morning",
+    "player": {
+     "name": "六点起床小分队",
+     "avatarId": "sleepy-head"
+    },
+    "collectible": {
+     "name": "提神咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "六点的闹钟",
+     "spriteId": "alarm-clock"
+    },
+    "lines": [
+     "说好的六点，谁先起谁赢",
+     "再睡五分钟，就五分钟",
+     "闹钟关了，决心也关了",
+     "十一点，谁也别笑谁",
+     "书还没翻，天已经亮了"
+    ],
+    "ending": {
+     "low": "闹钟响了七次，你一次都没醒。期末嘛，重在参与，笑一笑也算团建。",
+     "mid": "咖啡灌了两杯，书翻了三页，人算是坐起来了。下次六点，真起。",
+     "high": "全宿舍就你冲到了咖啡前！虽然最后大家还是一起笑到十一点。"
+    }
+   }
+  },
+  {
+   "idx": 7,
+   "kind": "health",
+   "input": "我发誓这个月一定减肥，结果第一周就点了三次炸鸡，每次都说这是最后一顿，健身房年卡到现在只去过两次。",
+   "inputChars": 49,
+   "forceMode": "runner",
+   "ms": 35835,
+   "status": 201,
+   "ok": true,
+   "id": "CTudxfU0XzNg",
+   "mode": "runner",
+   "sceneId": "gym",
+   "attempts": 1,
+   "output": {
+    "title": "年卡只去过两次",
+    "intro": "健身房的年卡在钱包里发烫，哑铃在前方等着，炸鸡在隔壁道招手——今晚只能选一个。",
+    "ruleText": "切换跑道，冲过 哑铃，撞上 炸鸡 会掉血。",
+    "mode": "runner",
+    "sceneId": "gym",
+    "player": {
+     "name": "发誓减肥的我",
+     "avatarId": "gym-goer"
+    },
+    "collectible": {
+     "name": "哑铃",
+     "spriteId": "dumbbell"
+    },
+    "obstacle": {
+     "name": "炸鸡",
+     "spriteId": "fried-chicken"
+    },
+    "lines": [
+     "这是最后一顿，真的",
+     "我发誓，下周一就去",
+     "年卡还剩三百多天呢",
+     "健身房在几楼来着？"
+    ],
+    "ending": {
+     "low": "炸鸡一块没躲过，哑铃一个没接住。没事，减肥这事嘛，明天再说，反正年卡还没过期。",
+     "mid": "躲掉了几块炸鸡，也撞上了几块。年卡还能救，下周多去两次就回本了。",
+     "high": "哑铃接得稳，炸鸡躲得准，年卡终于刷出价值了！这个月的誓言，这次是真的。"
+    }
+   }
+  },
+  {
+   "idx": 8,
+   "kind": "travel",
+   "input": "早高峰的地铁，我被挤得双脚离地，到站的时候发现自己被推到了另一个车厢。",
+   "inputChars": 35,
+   "forceMode": "runner",
+   "ms": 37764,
+   "status": 201,
+   "ok": true,
+   "id": "4RhLFNK-7o-4",
+   "mode": "runner",
+   "sceneId": "subway-commute",
+   "attempts": 1,
+   "output": {
+    "title": "挤去了隔壁车厢",
+    "intro": "早高峰车门一开，人流推着你往前飘。看见空座就冲，看见人墙就绕。",
+    "ruleText": "切换跑道，冲过 空座位，撞上 挤成墙的人流 会掉血。",
+    "mode": "runner",
+    "sceneId": "subway-commute",
+    "player": {
+     "name": "挤地铁的我",
+     "avatarId": "commuter"
+    },
+    "collectible": {
+     "name": "空座位",
+     "spriteId": "seat"
+    },
+    "obstacle": {
+     "name": "挤成墙的人流",
+     "spriteId": "queue-rope"
+    },
+    "lines": [
+     "别挤了，我脚离地了",
+     "空座！冲！",
+     "下一站是哪，我不认识",
+     "包还在，人没了",
+     "怎么被推到隔壁车厢了"
+    ],
+    "ending": {
+     "low": "站是到站了，车厢不对，人也没挤出去，明天早点出门吧。",
+     "mid": "抢到几个座，也被推着换了好几节车厢，能到站就算赢。",
+     "high": "人没丢、包没丢，还坐着到了公司，今天的早高峰你赢了。"
+    }
+   }
+  },
+  {
+   "idx": 9,
+   "kind": "work",
+   "input": "每天下班前五分钟，总有人发一句\"这个今晚能给我吗\"，我怀疑他是掐着表发的。",
+   "inputChars": 37,
+   "forceMode": "runner",
+   "ms": 40254,
+   "status": 201,
+   "ok": true,
+   "id": "TKtcjFJ3j9np",
+   "mode": "runner",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "下班前五分钟",
+    "intro": "离下班还有五分钟，电脑右下角又闪了一下，那人仿佛掐着表。",
+    "ruleText": "切换跑道，冲过 准点下班票，撞上 下班前的消息 会掉血。",
+    "mode": "runner",
+    "sceneId": "office-night",
+    "player": {
+     "name": "打工人",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "准点下班票",
+     "spriteId": "ticket"
+    },
+    "obstacle": {
+     "name": "下班前的消息",
+     "spriteId": "message-bubble"
+    },
+    "lines": [
+     "这个今晚能给我吗？",
+     "很快的，就改一下",
+     "我怀疑他掐着表发的",
+     "咖啡还剩半杯，撑住",
+     "冲过这条就能下班"
+    ],
+    "ending": {
+     "low": "消息一条没躲过，又坐到末班车。明天把消息提醒关了吧，真的。",
+     "mid": "躲掉一半，还是多留了半小时。咖啡续上，明天继续躲。",
+     "high": "五点整打卡走人，所有消息全被你绕过去。这速度，值得写进周报。"
+    }
+   }
+  },
+  {
+   "idx": 10,
+   "kind": "pet",
+   "input": "猫碗里明明有粮，它非要在旁边叫，我加了新粮它才吃，吃完又去看了一眼原来的碗。",
+   "inputChars": 38,
+   "forceMode": "click",
+   "ms": 37931,
+   "status": 201,
+   "ok": true,
+   "id": "srjKt8RUnpnT",
+   "mode": "click",
+   "sceneId": "pet-living-room",
+   "attempts": 1,
+   "output": {
+    "title": "新粮才香",
+    "intro": "碗里明明还有粮，它偏要扯着嗓子喊，你只好又添了一勺。",
+    "ruleText": "点掉 叫唤的猫 得分，点到 猫条 会扣血。",
+    "mode": "click",
+    "sceneId": "pet-living-room",
+    "player": {
+     "name": "铲屎官",
+     "avatarId": "cat-owner"
+    },
+    "collectible": {
+     "name": "猫条",
+     "spriteId": "cat-treat"
+    },
+    "obstacle": {
+     "name": "叫唤的猫",
+     "spriteId": "cat"
+    },
+    "lines": [
+     "喵——碗里那是旧的！",
+     "新粮才配得上本喵",
+     "再添一勺，就一勺",
+     "吃完回头看一眼旧碗",
+     "这碗不香，换一碗"
+    ],
+    "ending": {
+     "low": "一勺又一勺，碗都快满了，它还是觉得原来那碗更香。你放下勺子：行，你赢了。",
+     "mid": "猫主子勉强给了个面子，吃两口又开始表演。铲屎官的手速还得再练练。",
+     "high": "新粮一上桌就被扫光，回头那一眼纯属礼貌。今晚你是持证上岗的铲屎官。"
+    }
+   }
+  },
+  {
+   "idx": 11,
+   "kind": "work",
+   "input": "开会两小时，讨论的核心是把会议改到明天再开，走出会议室的时候我甚至不知道今天的议题是什么。",
+   "inputChars": 45,
+   "forceMode": "click",
+   "ms": 35880,
+   "status": 201,
+   "ok": true,
+   "id": "WjVMuhFygBFp",
+   "mode": "click",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "会议改到明天",
+    "intro": "会议室坐了两小时，散会时才发现：今天的议题是什么来着？",
+    "ruleText": "点掉 废话发言 得分，点到 续命咖啡 会扣血。",
+    "mode": "click",
+    "sceneId": "office-night",
+    "player": {
+     "name": "打工人",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "续命咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "废话发言",
+     "spriteId": "message-bubble"
+    },
+    "lines": [
+     "这个议题先放一放",
+     "要不我们改到明天？",
+     "再聊五分钟就好",
+     "今天的议题是啥来着",
+     "纪要记得发我一份"
+    ],
+    "ending": {
+     "low": "会开完了，咖啡也洒了一桌。别慌，反正这场会的纪要也没人会点开看。",
+     "mid": "你点掉了大半废话，成功熬到散会。议题还是没搞明白，但明天还有一场等着你。",
+     "high": "两小时的废话被你精准清空，今天终于不用再开会了。明天的会？明天再说。"
+    }
+   }
+  },
+  {
+   "idx": 12,
+   "kind": "shopping",
+   "input": "为了凑满减我买了三件不需要的东西，最后发现比原价还贵。",
+   "inputChars": 27,
+   "forceMode": "click",
+   "ms": 32577,
+   "status": 201,
+   "ok": true,
+   "id": "xT6gXk6xm0ib",
+   "mode": "click",
+   "sceneId": "parcel-delivery",
+   "attempts": 1,
+   "output": {
+    "title": "再凑一件就便宜了",
+    "intro": "购物车里躺着三件可有可无的东西，付款页面的数字越看越不对劲。",
+    "ruleText": "点掉 凑单价签 得分，点到 真正要买的快递 会扣血。",
+    "mode": "click",
+    "sceneId": "parcel-delivery",
+    "player": {
+     "name": "凑单选手",
+     "avatarId": "shopper"
+    },
+    "collectible": {
+     "name": "真正要买的快递",
+     "spriteId": "parcel"
+    },
+    "obstacle": {
+     "name": "凑单价签",
+     "spriteId": "price-tag"
+    },
+    "lines": [
+     "就差二十块，再挑一件",
+     "这个以后肯定用得上",
+     "满三百减五十，不亏吧",
+     "怎么算完比原价还贵",
+     "退货？算了算了"
+    ],
+    "ending": {
+     "low": "凑单凑到手软，购物车比钱包还沉。没事，谁没为满减心动过，下次先看一眼原价。",
+     "mid": "省下的和花掉的刚好打平，你算是摸到满减的边了。手速练出来了，下次先算再点。",
+     "high": "满减套路被你一眼看穿，价签点得干净利落。这波你是真省到了，购物车都清爽了。"
+    }
+   }
+  },
+  {
+   "idx": 13,
+   "kind": "subtle",
+   "input": "群里没人回我的消息，过了一会儿大家开始聊别的话题，我把自己的那条默默撤回了。",
+   "inputChars": 38,
+   "forceMode": "click",
+   "ms": 37296,
+   "status": 201,
+   "ok": true,
+   "id": "GY8C9-xe_3Uv",
+   "mode": "click",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "两分钟内撤回",
+    "intro": "深夜的群聊框亮着，我那条消息孤零零挂在最底下，上面的人已经开始聊别的事了。",
+    "ruleText": "点掉 石沉大海的消息 得分，点到 别人的热闹 会扣血。",
+    "mode": "click",
+    "sceneId": "office-night",
+    "player": {
+     "name": "群里的小透明",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "别人的热闹",
+     "spriteId": "star"
+    },
+    "obstacle": {
+     "name": "石沉大海的消息",
+     "spriteId": "message-bubble"
+    },
+    "lines": [
+     "有人回我吗？",
+     "群里突然聊起了别的",
+     "撤回，就当没发过",
+     "热闹是他们的",
+     "已读不回，习惯就好"
+    ],
+    "ending": {
+     "low": "消息撤回了，群照样热闹。没事，下次换个群发，总有人接得住你。",
+     "mid": "有几条被接住了，剩下的悄悄沉底。群聊嘛，本来就随缘。",
+     "high": "全接住了！今晚你就是群里最会聊的那个人，撤回键都用不上了。"
+    }
+   }
+  },
+  {
+   "idx": 14,
+   "kind": "work",
+   "input": "工位对面的同事敲键盘声音像在打桩，我戴了降噪耳机还是能听见他的节奏，甚至开始跟着抖腿。",
+   "inputChars": 43,
+   "forceMode": "click",
+   "ms": 42748,
+   "status": 201,
+   "ok": true,
+   "id": "dXscpXMp0uXe",
+   "mode": "click",
+   "sceneId": "office-night",
+   "attempts": 1,
+   "output": {
+    "title": "对面的键盘在打桩",
+    "intro": "凌晨的工位，对面的键盘敲得像打桩机，降噪耳机也拦不住那个节奏。",
+    "ruleText": "点掉 打桩键盘声 得分，点到 我的咖啡 会扣血。",
+    "mode": "click",
+    "sceneId": "office-night",
+    "player": {
+     "name": "抖腿打工人",
+     "avatarId": "office-worker"
+    },
+    "collectible": {
+     "name": "我的咖啡",
+     "spriteId": "coffee"
+    },
+    "obstacle": {
+     "name": "打桩键盘声",
+     "spriteId": "message-bubble"
+    },
+    "lines": [
+     "咚、咚、咚，像打桩",
+     "降噪耳机：我真的尽力了",
+     "腿先抖为敬",
+     "他是不是在写一万字",
+     "下班前能停一下吗"
+    ],
+    "ending": {
+     "low": "键盘声把你按在工位上摩擦，腿抖成筛子，先喝口咖啡缓缓吧。",
+     "mid": "勉强扛住了这波节奏，虽然耳朵还在嗡嗡的，但你已经学会假装没听见。",
+     "high": "降噪成功！对面的打桩机终于熄火，工位重回安静，你就是办公室静音王。"
+    }
+   }
+  }
+ ]
+}
